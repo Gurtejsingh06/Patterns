@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{   
+    int rows;
+    cin >> rows;
+    
+    int spaces = rows-1;
+    for(int i = 1; i <= rows; i++){
+        
+        for(int k = spaces; k >= 1; k--){
+            cout << " ";
+        }
+        spaces--;
+        for(int j = 1; j <= rows; j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    return 0;
+}

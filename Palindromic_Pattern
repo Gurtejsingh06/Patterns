@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{   
+    int rows;
+    cin >> rows;
+    int counter = 2;
+    
+    int spaces = rows-1;
+    for(int i = 1; i <= rows; i++){
+        
+        for(int k = spaces; k >= 1; k--){
+            cout << " ";
+        }
+        
+        for(int j = rows; j >= spaces+1; j--){
+            cout << j-spaces;
+        }
+        
+        if(i >= 2){
+            for(int l = 1; l < i; l++){
+                cout << counter;
+                counter++;
+            }
+        }
+        spaces--;
+        counter=2;
+        cout << endl;
+        
+    }
+    return 0;
+}
